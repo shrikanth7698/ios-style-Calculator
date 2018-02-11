@@ -2,7 +2,7 @@
   ios style calculator app for android.
 <br>
 <br>
-<img src="https://drive.google.com/uc?id=1Mzl-YaALBBLCOu9JELGqzcc8n7l8jNda" width=400>
+<img src="https://drive.google.com/uc?id=1xmCWGe2KTwHD_q4gOl9QZ_utNmNG8nCU" width=400>
 <br>
 <hr>
 <br>
