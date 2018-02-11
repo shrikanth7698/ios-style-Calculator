@@ -6,15 +6,32 @@
     android:background="@android:color/black"
     android:layout_height="match_parent"
     tools:context="com.shrikanthravi.ioscalculator.CalculatorActivity">
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="50sp"
-        android:textColor="@android:color/white"
         android:layout_above="@id/keypadLL"
-        android:gravity="right"
-        android:layout_marginRight="16dp"
-        android:text="24"/>
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:textColor="@android:color/white"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:text="22+2"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/tab_indicator_text"
+            android:gravity="right"
+            android:paddingRight="20dp"
+            android:text="24"/>
+
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,6 +56,7 @@
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="80dp"
                     android:layout_gravity="center"
+                    android:id="@+id/clearMRL"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
@@ -65,6 +83,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/negateMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -90,6 +109,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/percentageMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -116,6 +136,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/dividelMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -151,6 +172,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/sevenMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -177,6 +199,7 @@
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
+                    android:id="@+id/eightMRL"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
                     <TextView
@@ -201,6 +224,7 @@
                     android:layout_width="80dp"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
+                    android:id="@+id/nineMRL"
                     app:mrl_rippleOverlay="true"
                     android:layout_gravity="center"
                     android:layout_height="80dp">
@@ -229,6 +253,7 @@
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_gravity="center"
+                    android:id="@+id/multiplyMRL"
                     android:layout_height="80dp">
                     <TextView
                         android:layout_width="80dp"
@@ -265,6 +290,7 @@
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
+                    android:id="@+id/fourMRL"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
                     <TextView
@@ -290,6 +316,7 @@
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
+                    android:id="@+id/fiveMRL"
                     android:layout_gravity="center"
                     android:layout_height="80dp">
                     <TextView
@@ -314,6 +341,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/sixMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -341,6 +369,7 @@
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
+                    android:id="@+id/minusMRL"
                     android:layout_gravity="center"
                     android:layout_height="80dp">
                     <TextView
@@ -378,6 +407,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/oneMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -386,7 +416,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/text_bg1"
                         android:textColor="@android:color/white"
-                        android:text="3"
+                        android:text="1"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textSize="26sp"/>
@@ -404,6 +434,7 @@
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
+                    android:id="@+id/twoMRL"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
                     <TextView
@@ -428,6 +459,7 @@
                     android:layout_width="80dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/threeMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -436,7 +468,7 @@
                         android:layout_height="80dp"
                         android:background="@drawable/text_bg1"
                         android:textColor="@android:color/white"
-                        android:text="1"
+                        android:text="3"
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:textSize="26sp"/>
@@ -455,6 +487,7 @@
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
+                    android:id="@+id/plusMRL"
                     android:layout_gravity="center"
                     android:layout_height="80dp">
                     <TextView
@@ -487,6 +520,7 @@
                     android:layout_width="184dp"
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/zeroMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
@@ -514,6 +548,7 @@
                     android:layout_gravity="center"
                     app:mrl_rippleColor="#f5f5f5"
                     app:mrl_rippleRoundedCorners="40dp"
+                    android:id="@+id/decimalMRL"
                     app:mrl_rippleOverlay="true"
                     android:layout_height="80dp">
                     <TextView
@@ -533,6 +568,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="vertical"
+                android:id="@+id/equalToMRL"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1">
                 <com.balysv.materialripple.MaterialRippleLayout
