@@ -15,7 +15,9 @@ import com.balysv.materialripple.MaterialRippleLayout;
 public class CalculatorActivity extends AppCompatActivity {
 
     MaterialRippleLayout zeroMRL,oneMRL,twoMRL,threeMRL,fourMRL,fiveMRL,sixMRL,sevenMRL,eightMRL,nineMRL,clearMRL,negateMRL,percentageMRL,divideMRL,multiplyMRL,minusMRL,plusMRL,equaltoMRL;
-    TextView equationTV,answerTV;
+    TextView answerTV;
+    AutoResizeTextView equationTV;
+    float textSize;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class CalculatorActivity extends AppCompatActivity {
         equaltoMRL = findViewById(R.id.equalToMRL);
 
         equationTV = findViewById(R.id.equationTV);
+        textSize = equationTV.getTextSize();
         answerTV = findViewById(R.id.answerTV);
 
         equationTV.addTextChangedListener(new TextWatcher() {
@@ -71,69 +74,81 @@ public class CalculatorActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(equationTV.getText().toString().length()!=0){
+                    equationTV.setText(equationTV.getText().toString()+"0");
+                }
+
+            }
+        });
+
+        oneMRL.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                equationTV.setText(equationTV.getText().toString()+"1");
             }
         });
 
         twoMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"2");
             }
         });
 
         threeMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"3");
             }
         });
 
         fourMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"4");
             }
         });
 
         fiveMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"5");
             }
         });
 
         sixMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"6");
             }
         });
 
         sevenMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"7");
             }
         });
 
         eightMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"8");
             }
         });
 
         nineMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText(equationTV.getText().toString()+"9");
             }
         });
 
         clearMRL.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                equationTV.setText("");
+                recreate();
             }
         });
 

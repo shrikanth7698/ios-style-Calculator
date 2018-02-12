@@ -13,15 +13,16 @@
         android:layout_above="@id/keypadLL"
         android:animateLayoutChanges="true"
         android:orientation="vertical">
-        <TextView
+        <com.shrikanthravi.ioscalculator.AutoResizeTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="40sp"
             android:id="@+id/equationTV"
             android:textColor="@android:color/white"
             android:gravity="right"
+            android:maxLines="1"
             android:paddingRight="20dp"
-            android:text="22+2"/>
+            android:text=""/>
 
         <TextView
             android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             android:textColor="@android:color/tab_indicator_text"
             android:gravity="right"
             android:paddingRight="20dp"
-            android:text="24"/>
+            android:text=""/>
 
     </LinearLayout>
     <LinearLayout
