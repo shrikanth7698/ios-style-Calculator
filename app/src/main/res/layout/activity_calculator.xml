@@ -570,12 +570,12 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:orientation="vertical"
-                android:id="@+id/equalToMRL"
                 android:layout_marginRight="8dp"
                 android:layout_weight="1">
                 <com.balysv.materialripple.MaterialRippleLayout
                     android:layout_width="80dp"
                     app:mrl_rippleColor="#f5f5f5"
+                    android:id="@+id/equalToMRL"
                     app:mrl_rippleRoundedCorners="40dp"
                     app:mrl_rippleOverlay="true"
                     android:layout_gravity="center"
